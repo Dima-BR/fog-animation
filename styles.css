@@ -1,0 +1,61 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+
+.absolute-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    background: url(img/bg5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.fog{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+}
+.fog-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.fog-img{
+    position: absolute;
+    height: 100vh;
+    width: 300vw;
+    z-index: 2;
+}
+.img-first{
+    background: url(img/fog-1.png);
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: center;
+    animation: marquee 60s linear infinite;
+}
+
+.img-second{
+    background: url(img/fog-2.png);
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: center;
+    animation: marquee 60s linear infinite;
+}
+
+@keyframes marquee{
+    0%{
+        transform: translate3d(0,0,0);
+    }
+    100%{
+        transform: translate3d(-200vw,0,0);
+    }
+}
